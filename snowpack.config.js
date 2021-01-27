@@ -3,10 +3,10 @@
 module.exports = {
   mount: {
     /* ... */
-    public: "/",
-    src: "/dist",
+    public: { url: '/', static: true },
+    src: { url: '/dist' },
   },
-  plugins: ["@snowpack/plugin-react-refresh"],
+  plugins: ['@snowpack/plugin-react-refresh'],
   routes: [
     /* Enable an SPA Fallback in development: */
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
