@@ -15,7 +15,10 @@ const Err = ({ error }) => (
 
 const Loading = ({ abort }) => (
   <div>
-    Loading...<button onClick={abort}>Abort</button>
+    Loading...
+    <button className="myButton" onClick={abort}>
+      Abort request
+    </button>
   </div>
 );
 
@@ -32,7 +35,7 @@ const GitHubSearch = ({ query }) => {
   if (fetchTask.pending) return <Loading abort={fetchTask.abort} />;
 
   return (
-    <ul>
+    <ul className="a">
       {fetchTask.result.items.map(({ id, name, html_url }) => (
         <li key={id}>
           <a target="_blank" href={html_url}>
@@ -48,13 +51,18 @@ function App() {
   const [query, setQuery] = useState('');
 
   return (
-    <div className="App">
-      <header className="App-header">
-        Query:
-        <input value={query} onChange={(e) => setQuery(e.target.value)} />
-        {query && <GitHubSearch query={query} />}
-      </header>
-    </div>
+    <>
+      <div className="header">
+        Github Query
+        <p>
+          Try search project name from Github example <code>React</code>
+        </p>
+        <div>
+          <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
+          {query && <GitHubSearch query={query} />}
+        </div>
+      </div>
+    </>
   );
 }
 

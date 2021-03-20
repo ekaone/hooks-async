@@ -1,5 +1,90 @@
-/* Add CSS styles here! */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 body {
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
+  background-color: #151419;
+  color: #f7f8fb;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+.header {
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 25px;
+  letter-spacing: 0.5rem;
+}
+
+p {
+  color: whitesmoke;
+  letter-spacing: normal;
+  font-size: 1.5rem;
+}
+
+code {
+  box-shadow: 1px 1px #888888;
+  color: #f0e00a;
+}
+
+.header input[type='text'] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 3rem 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #e9e50e;
+  color: #151419;
+  border-radius: 0.5rem;
+  outline: none !important;
+  font-size: x-large;
+}
+
+.myButton {
+  box-shadow: 0px 10px 14px -7px #3e7327;
+  background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  background-color: #77b55a;
+  border-radius: 4px;
+  border: 1px solid #4b8f29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #5b8a3c;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+  background-color: #72b352;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+ul.a {
+  list-style-position: outside;
+  font-size: 1.25rem;
+  list-style-type: none;
+  letter-spacing: normal;
+}
+
+a:link {
+  color: #e9e50e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(54, 238, 9);
+  background-color: rgb(212, 37, 37);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+a:visited {
+  color: #e9e50e;
 }
